@@ -56,7 +56,7 @@ Response Example `HTTP_CODE 200`:
 ```json
 {
   "code" : null,
-  "message" : "This is the current app version.",
+  "message" : "This is the latest app version.",
   "data" : {
     "version_name" : "1.0.0",
     "version_code" : 1
