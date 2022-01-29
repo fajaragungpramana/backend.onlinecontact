@@ -55,11 +55,11 @@ RESPONSE        : JSON
 Response Example:
 ```json
 {
-  code: null,
-  message: null,
-  data: {
-    version_name : "1.0.0",
-    version_code : 1
+  "code" : null,
+  "message" : null,
+  "data" : {
+    "version_name" : "1.0.0",
+    "version_code" : 1
   }
 }
 ```
