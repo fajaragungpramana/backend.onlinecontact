@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "5000:27017"
+    networks:
+      - online.contact
+
+  online.contact:
+    build: .
+    container_name: online.contact
+    image: online.contact:latest
+    ports:
+      - "8000:8080"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_HOST=localhost
+      - MONGO_PORT=5000
+      - MONGO_DATABASE=online_contact
+    expose:
+      - "8000"
+    networks:
+      - online.contact
+
+networks:
+  online.contact:
+    name: online.contact
