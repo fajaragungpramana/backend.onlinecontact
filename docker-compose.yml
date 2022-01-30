@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    volumes:
+      - /data/db:/data/db
+    ports:
+      - "27017:27017"
+
+  online.contact:
+    build: .
+    container_name: online.contact
+    image: online.contact:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_HOST=mongodb
+      - MONGO_PORT=27017
+      - MONGO_DATABASE=online_contact
+    expose:
+      - "8080"

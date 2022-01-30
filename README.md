@@ -7,7 +7,7 @@ Simple application for save contact with authentication.
 ```bash
 > Java Spring Boot
 > MongoDB
-> Docker (NGINX, MONGODB)
+> Docker (APPLICATION, MONGODB)
 ```
 
 ## Application Flow
