@@ -1,7 +1,9 @@
 package online.contact.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+@JsonPropertyOrder({ "code", "message", "data" })
 public class DataResponse<T> {
 
     private int mCode;
