@@ -1,9 +1,11 @@
 package online.contact.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.util.List;
 
+@JsonPropertyOrder({ "code", "message", "data" })
 public class DataListResponse<T> {
 
     private int mCode;

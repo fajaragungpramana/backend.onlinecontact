@@ -1,16 +1,16 @@
 package online.contact.model.collection;
 
 import online.contact.model.constant.Collection;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 @Document(collection = Collection.VERSION)
 public class VersionCollection {
 
-    @Id
-    @Field("_id")
-    private String mId;
+    @MongoId(value = FieldType.OBJECT_ID)
+    private String _id;
 
     @Field("version_name")
     private String mVersionName;
@@ -19,7 +19,7 @@ public class VersionCollection {
     private Long mVersionCode;
 
     public String getId() {
-        return mId;
+        return _id;
     }
 
     public String getVersionName() {
@@ -31,7 +31,7 @@ public class VersionCollection {
     }
 
     public void setId(String id) {
-        this.mId = id;
+        this._id = id;
     }
 
     public void setVersionName(String versionName) {

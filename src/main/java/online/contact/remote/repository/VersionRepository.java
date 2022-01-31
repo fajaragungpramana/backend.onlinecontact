@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VersionRepository extends MongoRepository<VersionCollection, String> {
 
-    @Query("{ 'id' : ?0}")
+    @Query("{ '_id' : ?0 }")
     VersionCollection getVersionById(ObjectId id);
 
 }

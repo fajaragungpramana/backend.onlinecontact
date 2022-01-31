@@ -17,6 +17,8 @@ public class VersionController {
 
     private static final String VERSION_ID = "61f670e4d85f374c28fd5577";
 
+    private static final Byte ERROR_CODE_ID_NOT_FOUND = 1;
+
     @Autowired
     private VersionService mVersionService;
 
@@ -35,7 +37,7 @@ public class VersionController {
 
             return ResponseEntity.ok(dataResponse);
         } else {
-            dataResponse.setCode(1);
+            dataResponse.setCode(ERROR_CODE_ID_NOT_FOUND);
             dataResponse.setMessage("The current latest version app with id " + VERSION_ID + " not found.");
 
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(dataResponse);
