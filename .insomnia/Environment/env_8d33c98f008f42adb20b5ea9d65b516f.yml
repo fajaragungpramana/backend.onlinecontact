@@ -1,0 +1,14 @@
+_id: env_8d33c98f008f42adb20b5ea9d65b516f
+type: Environment
+parentId: env_507a63e586515b2b117e3f7d780be301095e54f9
+modified: 1643644870808
+created: 1643644766280
+name: Staging Environment
+data:
+  base_url: http://localhost:8080/
+dataPropertyOrder:
+  "&":
+    - base_url
+color: "#7d69cb"
+isPrivate: false
+metaSortKey: 1643644766280

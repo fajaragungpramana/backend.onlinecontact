@@ -1,0 +1,21 @@
+_id: req_70c4bc9e90b547ef899a1e872e02119b
+type: Request
+parentId: fld_c5374b89658648bc8700fca12309a7af
+modified: 1643644953516
+created: 1643644834069
+url: "{{ _.base_url }}version"
+name: Version
+description: This api is to check the application version.
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1643644834069
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
