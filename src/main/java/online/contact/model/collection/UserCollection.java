@@ -21,6 +21,12 @@ public class UserCollection {
     @Field("password")
     private String mPassword;
 
+    @Field("created_at")
+    private String mCreatedAt;
+
+    @Field("updated_at")
+    private String mUpdatedAt;
+
     public String getId() {
         return _id;
     }
@@ -37,6 +43,14 @@ public class UserCollection {
         return mPassword;
     }
 
+    public String getCreatedAt() {
+        return mCreatedAt;
+    }
+
+    public String getUpdatedAt() {
+        return mUpdatedAt;
+    }
+
     public void setId(String id) {
         this._id = id;
     }
@@ -51,6 +65,14 @@ public class UserCollection {
 
     public void setPassword(String password) {
         this.mPassword = password;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.mCreatedAt = createdAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.mUpdatedAt = updatedAt;
     }
 
 }
