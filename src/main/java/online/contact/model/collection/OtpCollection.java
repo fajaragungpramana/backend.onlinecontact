@@ -18,6 +18,9 @@ public class OtpCollection {
     @Field("otp")
     private String mOtp;
 
+    @Field("is_verified")
+    private Boolean mIsVerified;
+
     @Field("created_at")
     private String mCreatedAt;
 
@@ -34,6 +37,10 @@ public class OtpCollection {
 
     public String getOtp() {
         return mOtp;
+    }
+
+    public Boolean isVerified() {
+        return mIsVerified;
     }
 
     public String getCreatedAt() {
@@ -54,6 +61,10 @@ public class OtpCollection {
 
     public void setOtp(String otp) {
         this.mOtp = otp;
+    }
+
+    public void isVerified(Boolean isVerified) {
+        this.mIsVerified = isVerified;
     }
 
     public void setCreatedAt(String createdAt) {
