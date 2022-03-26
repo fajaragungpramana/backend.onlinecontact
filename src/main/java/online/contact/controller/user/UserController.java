@@ -7,6 +7,7 @@ import online.contact.model.collection.UserCollection;
 import online.contact.model.constant.Constant;
 import online.contact.model.constant.HttpRoute;
 import online.contact.remote.service.UserService;
+import online.contact.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -58,8 +59,7 @@ public class UserController {
 
             mUserService.setUser(userCollection);
 
-            // TODO: Generate token here.
-            registerResponse.setOtpToken("Hello Ini Token");
+            registerResponse.setOtpToken(new JwtUtil().setToken(userCollection));
 
             response.setCode(HttpStatus.CREATED.value());
             response.setMessage("New account successfully created.");
